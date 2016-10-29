@@ -9,7 +9,7 @@ In order to faciliate the usage, I implemented one alternative version with weig
 
       pip install deepwalk 
 
-2. Then, download this package, and put the 'main.py' and 'weighted_random_walk.py' into your python lib depository directory. 
+2. Then, download this package, and put the 'main.py' and 'weighted_random_walk.py' into your python lib depository directory for original deepwalk. 
 
 3. Now, you can run your deepwalk with: 
   
