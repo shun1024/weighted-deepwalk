@@ -13,7 +13,7 @@ In order to faciliate the usage, I implemented one alternative version with weig
 
 3. Now, you can run your deepwalk with: 
   
-      deepwalk --input input.file --format weightAdj --output output.file
+      deepwalk --input input.file --format weighted_edgelist --output output.file
 
 ref: 
 

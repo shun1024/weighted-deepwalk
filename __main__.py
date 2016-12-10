@@ -51,7 +51,7 @@ def process(args):
     G = graph.load_edgelist(args.input, undirected=args.undirected)
   elif args.format == "mat":
     G = graph.load_matfile(args.input, variable_name=args.matfile_variable_name, undirected=args.undirected)
-  elif args.format == 'weightAdj':
+  elif args.format == 'weighted_edgelist':
     G = nx.read_weighted_edgelist(args.input)
   else:
     raise Exception("Unknown file format: '%s'.  Valid formats: 'adjlist', 'edgelist', 'mat'" % args.format)
@@ -68,7 +68,7 @@ def process(args):
 
   if data_size < args.max_memory_data_size:
     print("Walking...")
-    if args.format == 'weightAdj':
+    if args.format == 'weighted_edgelist':
       #only changaed this part -- shun
       walks = weighted_random_walk.random_walk(G, num_paths=args.number_walks,path_length=args.walk_length, alpha=0)
     else:
