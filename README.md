@@ -1,19 +1,19 @@
 # weighted-deepwalk
-weighted random walk implementation for deepwalk (in python)
+Weighted Random Walk Implementation for DeepWalk (in Python) 
 
-As deepwalk [1] can only generate sequence in a uniform distribution, weighted edge is not accepted. 
+The deepwalk [1] with weighted edge graph is implemented here. 
 
-In order to faciliate the usage, I implemented one alternative version with weighted edge. (just add one more function)
+# Installation: 
 
-1. For most users, you can install original deepwalk package in your computer frist by:
+1. Install original deepwalk package: 
 
-      pip install deepwalk 
+      `pip install deepwalk`
 
-2. Then, download this package, and put the 'main.py' and 'weighted_random_walk.py' into your python lib depository directory for original deepwalk. 
+2. Move 'main.py' and 'weighted_random_walk.py' into the python lib directory for deepwalk 
 
-3. Now, you can run your deepwalk with: 
-  
-      deepwalk --input input.file --format weighted_edgelist --output output.file
+# Usage:
+
+      `deepwalk --input input.file --format weighted_edgelist --output output.file`
 
 ref: 
 
