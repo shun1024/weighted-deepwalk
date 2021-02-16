@@ -15,6 +15,6 @@ The deepwalk [1] with weighted edge graph is implemented here.
 
       deepwalk --input input.file --format weighted_edgelist --output output.file
 
-ref: 
+Reference: 
 
 [1] deepwalk: https://github.com/phanein/deepwalk
