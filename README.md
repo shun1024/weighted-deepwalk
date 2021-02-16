@@ -13,7 +13,7 @@ The deepwalk [1] with weighted edge graph is implemented here.
 
 # Usage:
 
-      `deepwalk --input input.file --format weighted_edgelist --output output.file`
+      deepwalk --input input.file --format weighted_edgelist --output output.file
 
 ref: 
 
