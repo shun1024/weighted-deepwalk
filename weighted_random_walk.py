@@ -3,7 +3,7 @@ import numpy as np
 import random
 
 def getTransitionMatrix(network, nodes):
-	matrix = np.empty([len(nodes), len(nodes)])
+	matrix = np.zeros([len(nodes), len(nodes)])
 
 	for i in range(0, len(nodes)):
 		neighs = network.neighbors(nodes[i])
@@ -11,14 +11,8 @@ def getTransitionMatrix(network, nodes):
 		for neigh in neighs:
 			sums += network[nodes[i]][neigh]['weight']
 
-		for j in range(0, len(nodes)):
-			if i == j :
-				matrix[i,j] = 0
-			else:
-				if nodes[j] not in neighs:
-					matrix[i, j] = 0
-				else:
-					matrix[i, j] = network[nodes[i]][nodes[j]]['weight'] / sums
+		for j in neighs:
+			matrix[i, nodes.index(j)] = network[nodes[i]][j]['weight'] / sums
 
 	return matrix
 
